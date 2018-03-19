@@ -26,11 +26,7 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=255)
      */
     private $password;
-
-    /**
-     * @ORM\Column(type="string", length=255, unique=true)
-     */
-    private $email;
+    
 
     /**
      * @ORM\Column(name="is_active", type="boolean")
@@ -39,14 +35,13 @@ class User implements UserInterface
 
     private $plainPassword; 
 
-    public function __construct($id, $username, $password, $email, $plainPassword)
+    private $role;
+
+    private $salt;
+
+    public function __construct()
     {
-        $this->id=$id;
-        $this->username=$username;
-        $this->password=$password;
-        $this->email=$email;
-        $this->plainPassword=$plainPassword;
-        $this->isActive = true;
+
     }
 
     public function getId()
@@ -57,10 +52,8 @@ class User implements UserInterface
     {
         return $this->username;
     }
-        public function getEmail()
-    {
-        return $this->email;
-    }
+
+    
     public function getSalt()
     {
         return null;
@@ -79,9 +72,20 @@ class User implements UserInterface
     {
         return array('ROLE_USER');
     }
-
-    public function eraseCredentials()
+        public function setUsername($username)
     {
+        $this->username=$username;
+    }
+
+
+    public function setPassword($password)
+    {
+         $this->password=$password;
+    }
+
+    public function setplainPassword($plainPassword)
+    {
+       $this->plainPassword=$plainPassword;
     }
 
     public function addRole($role) {
