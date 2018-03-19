@@ -36,8 +36,8 @@ class ProductController extends Controller
 				if ($form->isSubmitted() && $form->isValid()) {
 				    $result = $form->getData();
 				}
-				return $this->render("product/add.html.twig", array("form" => $form->createView()) , "result" => $result;
+				return ["form" => $form->createView(), "result" => $result];
 
-        );
+        
 	}
 }

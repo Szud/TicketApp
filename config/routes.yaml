@@ -6,3 +6,6 @@
 app_hello_world:
     path: /hello/world
     controller: App\Controller\HelloWorldController::hello
+login:
+    path:       /login
+    controller: App\Controller\SecurityController::login
