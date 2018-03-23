@@ -54,12 +54,12 @@ public function login(Request $request, AuthenticationUtils $authenticationUtils
             // 4) save the User!
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);
-            $em->flush();
+            $em->flush($user);
             // maybe set a "flash" success message for the user
 
             // ... do any other work - like sending them an email, etc
 
-            return $this->redirectToRoute('redirect_to_another_rule');
+            return $this->redirectToRoute('/Demandeur/home');
         }
 
         return $this->render(

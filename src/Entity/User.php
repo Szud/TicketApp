@@ -35,7 +35,7 @@ class User implements UserInterface
     /**
     * @ORM\Column(name="roles", type="json_array")
     **/
-    private $roles;
+    private $roles=["ROLE_USER"];
 
     private $salt;
 
