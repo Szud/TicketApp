@@ -34,8 +34,10 @@ class User implements UserInterface
     private $isActive;
 
     private $plainPassword; 
-
-    private $role;
+    /**
+    * @ORM\Column(name="roles", type="json_arrays")
+    **/
+    private $roles;
 
     private $salt;
 
