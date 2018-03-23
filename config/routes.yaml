@@ -12,3 +12,15 @@ app_creerTicket_demandeur:
 app_consulterTicket:
     path: /demandeur/consulterTicket
     controller: App\Controller\DemandeurController::consulterTicket
+app_home_operateur:
+    path: /operateur/home
+    controller: App\Controller\OperateurController::homeAction
+app_consulterTicket_operateur:
+    path: /operateur/tickets
+    controller: App\Controller\OperateurController::consulterTickets
+app_home_responsable:
+    path: /responsable/home
+    controller: App\Controller\ResponsableController::homeAction
+app_consulterStatistiques_responsable:
+    path: /responsable/statistique
+    controller: App\Controller\ResponsableController::consulterStatistiques
