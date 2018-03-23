@@ -35,8 +35,13 @@ class User implements UserInterface
 
     private $plainPassword; 
     /**
+<<<<<<< HEAD
      * @ORM\Column(name="roles", type="json_array")
      */
+=======
+    * @ORM\Column(name="roles", type="json_array")
+    **/
+>>>>>>> df55d1e9786d7518a5a5347a835d954211808c01
     private $roles;
 
     private $salt;
