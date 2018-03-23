@@ -52,10 +52,12 @@ public function login(Request $request, AuthenticationUtils $authenticationUtils
             $user->setPassword($password);
 
             // 4) save the User!
-            throw new \Exception("your job stats is.");
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($user);
+            $em->flush();
+            // maybe set a "flash" success message for the user
 
             // ... do any other work - like sending them an email, etc
-            // maybe set a "flash" success message for the user
 
             return $this->redirectToRoute('redirect_to_another_rule');
         }
