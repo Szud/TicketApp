@@ -26,8 +26,6 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=255)
      */
     private $password;
-    
-
     /**
      * @ORM\Column(name="is_active", type="boolean")
      */
@@ -35,13 +33,8 @@ class User implements UserInterface
 
     private $plainPassword; 
     /**
-<<<<<<< HEAD
-     * @ORM\Column(name="roles", type="json_array")
-     */
-=======
     * @ORM\Column(name="roles", type="json_array")
     **/
->>>>>>> df55d1e9786d7518a5a5347a835d954211808c01
     private $roles;
 
     private $salt;
