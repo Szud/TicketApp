@@ -3,6 +3,12 @@
 #    controller: App\Controller\DefaultController::index
 
 # the "app_hello_world" route name is not important yet
-app_hello_world:
-    path: /hello/world
-    controller: App\Controller\HelloWorldController::hello
+app_home_demandeur:
+    path: /demandeur/home
+    controller: App\Controller\DemandeurController::homeAction   
+app_creerTicket_demandeur:
+    path: /demandeur/creerTicket
+    controller: App\Controller\DemandeurController::creerTicket
+app_consulterTicket:
+    path: /demandeur/consulterTicket
+    controller: App\Controller\DemandeurController::consulterTicket
