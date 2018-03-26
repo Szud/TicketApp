@@ -59,7 +59,7 @@ public function login(Request $request, AuthenticationUtils $authenticationUtils
 
             // ... do any other work - like sending them an email, etc
 
-            return $this->redirectToRoute('/Demandeur/home');
+            return $this->redirectToRoute('redirect_to_another_rule');
         }
 
         return $this->render(

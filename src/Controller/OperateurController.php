@@ -30,7 +30,7 @@ class OperateurController extends Controller
      */
     public function consulterTickets(Request $request)
     {
-            
+        return $this->render('Operateur/operateurTickets.html.twig');       
     }
 
 

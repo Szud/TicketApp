@@ -30,7 +30,7 @@ class ResponsableController extends Controller
      */
     public function consulterStatistiques(Request $request)
     {
-            
+        return $this->render('Responsable/responsableStatistiques.html.twig');
     }
 
 

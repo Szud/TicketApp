@@ -38,7 +38,9 @@ class DemandeurController extends Controller
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
 
-            throw new \Exception("your job stats is.");
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($Ticket);
+            $em->flush($Ticket);
 
 
             return $this->redirectToRoute('redirect_to_another_rule');
@@ -55,7 +57,7 @@ class DemandeurController extends Controller
      */
     public function consulterTicket()
     {
-
+        return $this->render('Demandeur/demandeurMesTickets.html.twig');
     }
 
 }

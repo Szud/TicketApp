@@ -1,6 +1,7 @@
 {% extends "base.html.twig" %}
 {% block body %}
-    <h1>Bonjour {{username}}</h1>
+    <h1>Bonjour</h1>
     <a href="{{url("app_creerTicket_demandeur")}}">Créer un ticket</a>
     <a href="{{url("app_consulterTicket")}}">Consulter mes tickets</a>
+    <a href="{{url("login")}}">Déconnexion</a>
 {% endblock %}
